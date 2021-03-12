@@ -12,7 +12,7 @@ public:
 };
 
 class D1 : public B1 {
-	void vf() const override { cout << "D1::f\n"; }
+	void vf() const override { cout << "D1::vf\n"; }
 	void f() { cout << "D1::g\n"; }
 	virtual void pvf() { cout << "D1::pvf\n"; }
 };
@@ -45,7 +45,7 @@ void call(B1& b)
 }
 void call2(B2& b)
 {
-	b.pvf();
+	b.f();
 	b.pvf();
 }
 int main()
